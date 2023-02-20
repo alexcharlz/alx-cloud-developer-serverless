@@ -1,18 +1,20 @@
 {
+  "definitions": {},
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "group",
   "type": "object",
+  "title": "create todo schema",
+  "required": [
+    "name",
+    "dueDate"
+  ],
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9]+$"
     },
     "dueDate": {
       "type": "string"
     }
   },
-  "required": [
-    "name",
-    "dueDate"
-  ],
   "additionalProperties": false
 }
